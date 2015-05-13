@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Ejemplo JSF</title>
+    </h:head>
+    <h:body>
+        <h:form>
+            <fieldset>
+                <legend>Sumar 2 valores: </legend>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="1° Valor: " for="val1"/>
+                    <h:inputText p:type="number"  id="val1" value="#{ariMB.n1}"/>
+                    <h:outputLabel value="2° Valor: " for="val2"/>
+                    <h:inputText p:type="number" id="val2" value="#{ariMB.n2}"/>
+                    <h:commandButton value="Sumar"/>
+                    <h:outputLabel value="Resultado: #{ariMB.sumar()}" rendered="#{ariMB.n1 != 0}"/>
+                </h:panelGrid>
+            </fieldset>
+        </h:form>
+    </h:body>
+</html>
+
